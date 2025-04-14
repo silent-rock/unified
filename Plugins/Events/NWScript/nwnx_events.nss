@@ -1785,6 +1785,17 @@ _______________________________________
           \code{.c}
           NWNX_Events_AddIDToWhitelist("NWNX_ON_ITEMPROPERTY_EFFECT", ITEM_PROPERTY_*);
           \endcode
+_______________________________________
+    ## Area Transition Events
+    - NWNX_ON_AREA_TRANSITION_BEFORE
+    - NWNX_ON_AREA_TRANSITION_AFTER
+
+    `OBJECT_SELF` = The player transitioning.
+
+    Event Data Tag        | Type   | Notes
+    ----------------------|--------|-------
+    PREVIOUS_AREA         | object | The area the player is leaving. Convert to object with StringToObject() |
+    TARGET_AREA           | object | The area the player is entering. Convert to object with StringToObject() |
 */
 
 /// @name Events Event Constants
@@ -2137,6 +2148,8 @@ const string NWNX_ON_ITEMPROPERTY_EFFECT_APPLIED_BEFORE = "NWNX_ON_ITEMPROPERTY_
 const string NWNX_ON_ITEMPROPERTY_EFFECT_APPLIED_AFTER = "NWNX_ON_ITEMPROPERTY_EFFECT_APPLIED_AFTER";
 const string NWNX_ON_ITEMPROPERTY_EFFECT_REMOVED_BEFORE = "NWNX_ON_ITEMPROPERTY_EFFECT_REMOVED_BEFORE";
 const string NWNX_ON_ITEMPROPERTY_EFFECT_REMOVED_AFTER = "NWNX_ON_ITEMPROPERTY_EFFECT_REMOVED_AFTER";
+const string NWNX_ON_AREA_TRANSITION_BEFORE = "NWNX_ON_AREA_TRANSITION_BEFORE";
+const string NWNX_ON_AREA_TRANSITION_AFTER = "NWNX_ON_AREA_TRANSITION_AFTER";
 /// @}
 
 /// @name Events ObjectType Constants
